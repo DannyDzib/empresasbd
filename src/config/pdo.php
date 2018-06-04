@@ -3,13 +3,9 @@
     class db{
         // Properties
         private $dbhost = 'localhost';
-        private $dbname = 'proyectodb';
+        private $dbname = 'crud-empresas';
         private $dbuser = 'root';
-<<<<<<< HEAD
-        private $dbpass = 'AngelDanielDzibChan';
-=======
         private $dbpass = '_19Mofeta84';
->>>>>>> cc5f8b8e403fd09fd0383d7854dd1c023cfa6474
         // Connect
         public function connect(){
             $mysql_connect_str = "mysql:host=$this->dbhost;dbname=$this->dbname; charset=utf8";

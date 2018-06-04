@@ -46,7 +46,7 @@ try {
                                 <?php endforeach ?>
                             </select>
                             <?php } else {
-                                echo '<p>NO HAY DATOS EN LA BASE</p>';
+                                echo '<p>NO HAY EMPRESAS REGISTRADAS PARA ASIGNAR</p>';
                             }?>
                         </div>
                         

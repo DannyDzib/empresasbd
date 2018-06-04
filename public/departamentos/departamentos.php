@@ -42,7 +42,7 @@
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Nombre</th>
+                                <th scope="col">Departamentos</th>
                                 <th scope="col">Empresa</th>
                             </tr>
                         </thead>
