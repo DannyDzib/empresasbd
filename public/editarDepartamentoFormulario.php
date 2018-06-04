@@ -34,29 +34,44 @@ try {
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" method="POST" action="../src/methods/nuevoDepartamento.php">
+                    <form autocomplete="off" method="POST" action="../src/methods/updateDepartamento.php">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre del departamento</label>
+                            <input type="hidden" value=" <?php echo $result['id_dep']; ?>" class="form-control" name="id_dep">
                             <input type="text" value=" <?php echo $result['nombre_departamento']; ?>" class="form-control" name="nombre">
                         </div>
-
-                        <?php  
-                        $id_comp = $result['id_dep'];
-                        echo $id_comp;
-
-                        $empresas = "SELECT id_empresa, nombre FROM empresas";
-                        try {
-                            $db = new db();
-                            $db = $db->connect();
-                            $ex = $db->query($empresas);
-                            $result = $ex->fetch();
-                        } catch(PDOException $e) {
-                            echo $e->getMessage();
-                        }
-
-                        ?>
-
                         
+                        <div class="form-group">
+
+                            <?php 
+                                $query = "SELECT 
+                                    id_empresa, 
+                                    nombre FROM empresas 
+                                    order by id_empresa=$id";
+
+                                try {
+                                    $db = new db();
+                                    $db = $db->connect();
+                                    $ejecutar = $db->query($query);
+                                    $empresa = $ejecutar->fetchAll();
+                                    $db = null;
+                            
+                                } catch(PDOException $e) {
+                                    echo $e->getMessage();
+                                }
+                            ?>
+                            <label for="exampleFormControlSelect1">Empresa</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <?php foreach ($empresa as $value) : ?>
+                                <option value="<?php echo $value['id_empresa'];?>"> 
+                                    <?php echo $value['nombre']; ?> 
+                                </option>
+                                <?php endforeach ?>
+                            </select>
+
+
+                        </div>
+
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
                 </div>

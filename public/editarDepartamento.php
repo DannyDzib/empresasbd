@@ -20,7 +20,7 @@
         echo $e->getMessage();
     }
 
-?> 
+?>
 
 
 
@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Empresas
+                        Departamentos
                     </h4>
                 </div>
                 <div class="card-body">
@@ -39,16 +39,18 @@
 
                         <div class="form-group">
                             <?php if($result) { ?>
-                                <select class="form-control" name="id_dep">
-                            <?php foreach($result as $data): ?>
-                                <option value="<?php echo $data['id_dep'] ?>"> <?php echo $data['nombre_departamento'] ?> </option>
-                            <?php endforeach ?>
+                            <select class="form-control" name="id_dep">
+                                <?php foreach($result as $data): ?>
+                                <option value="<?php echo $data['id_dep'] ?>">
+                                    <?php echo $data['nombre_departamento'] ?> </option>
+                                <?php endforeach ?>
                             </select>
+                            <input type="hidden" value="<?php echo $data['id_empresa'] ?>" name="id_empresa">
+
                             <?php } else {
                                 echo '<p>NO HAY DATOS EN LA BASE</p>';
                             }?>
                         </div>
-
 
                         <?php if($result) { ?>
 
