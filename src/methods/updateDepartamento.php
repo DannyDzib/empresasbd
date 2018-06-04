@@ -18,7 +18,7 @@
             $stmt->execute(); 
             $db = null;
 
-            header('Location: ../../public/editarDepartamento.php');
+            header('Location: ../../public/departamentos/editar.php');
 
         } catch(PDOException $e) {
             echo $e->getMessage();

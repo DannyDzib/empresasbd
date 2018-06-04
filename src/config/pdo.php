@@ -5,7 +5,7 @@
         private $dbhost = 'localhost';
         private $dbname = 'crud-empresas';
         private $dbuser = 'root';
-        private $dbpass = 'AngelDanielDzinChan';
+        private $dbpass = '_19Mofeta84';
         // Connect
         public function connect(){
             $mysql_connect_str = "mysql:host=$this->dbhost;dbname=$this->dbname; charset=utf8";

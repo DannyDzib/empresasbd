@@ -1,6 +1,6 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <div class="container mt-3">
@@ -13,7 +13,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" method="POST" action="../src/methods/nuevaEmpresa.php">
+                    <form autocomplete="off" method="POST" action="../../src/methods/nuevaEmpresa.php">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre</label>
                             <input type="text" class="form-control" name="nombre">

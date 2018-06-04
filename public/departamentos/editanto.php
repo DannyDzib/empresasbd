@@ -1,9 +1,9 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 <?php 
 
-include '../src/config/pdo.php';
+include '../../src/config/pdo.php';
 
 $id = $_REQUEST['id_dep'];
 
@@ -34,7 +34,7 @@ try {
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" method="POST" action="../src/methods/updateDepartamento.php">
+                    <form autocomplete="off" method="POST" action="../../src/methods/updateDepartamento.php">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre del departamento</label>
                             <input type="hidden" value=" <?php echo $result['id_dep']; ?>" class="form-control" name="id_dep">

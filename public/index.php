@@ -8,20 +8,20 @@
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresas</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                <a class="dropdown-item" href="nuevaEmpresa.php">Añadir</a>
-                <a class="dropdown-item" href="editarEmpresa.php">Editar</a>
-                <a class="dropdown-item" href="empresas.php">Eliminar</a>
-                <a class="dropdown-item" href="verEmpresas.php">Ver todos los datos</a>
+                <a class="dropdown-item" href="./empresas/nueva.php">Añadir</a>
+                <a class="dropdown-item" href="./empresas/editar.php">Editar</a>
+                <a class="dropdown-item" href="./empresas/eliminar.php">Eliminar</a>
+                <a class="dropdown-item" href="./empresas/empresas.php">Ver todos los datos</a>
             </div>
         </div>
         <!-- /btn-group -->
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departamentos</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                <a class="dropdown-item" href="nuevoDepartamento.php">Añadir</a>
-                <a class="dropdown-item" href="editarDepartamento.php">Editar</a>
-                <a class="dropdown-item" href="departamentos.php">Eliminar</a>
-                <a class="dropdown-item" href="verDepartamento.php">Ver todos los Datos</a>
+                <a class="dropdown-item" href="./departamentos/nuevo.php">Añadir</a>
+                <a class="dropdown-item" href="./departamentos/editar.php">Editar</a>
+                <a class="dropdown-item" href="./departamentos/eliminar.php">Eliminar</a>
+                <a class="dropdown-item" href="./departamentos/departamentos.php">Ver todos los Datos</a>
             </div>
         </div>
         <!-- /btn-group -->

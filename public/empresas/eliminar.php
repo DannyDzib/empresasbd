@@ -1,11 +1,11 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <?php 
 
-    include '../src/config/pdo.php';
+    include '../../src/config/pdo.php';
 
     $query = 'SELECT id_empresa, nombre FROM empresas';
 
@@ -35,7 +35,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="../src/methods/deleteEmpresa.php" method="POST">
+                    <form action="../../src/methods/deleteEmpresa.php" method="POST">
 
                         <div class="form-group">
                             <?php if($result) { ?>

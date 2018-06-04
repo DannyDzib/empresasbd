@@ -1,11 +1,11 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <?php 
 
-    include '../src/config/pdo.php';
+    include '../../src/config/pdo.php';
 
     $query = 'SELECT id_empresa, nombre FROM empresas';
 
@@ -20,7 +20,7 @@
         echo $e->getMessage();
     }
 
-?>
+?> 
 
 
 
@@ -35,15 +35,14 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="../src/methods/deleteEmpresa.php" method="POST">
+                    <form action="../../src/methods/editarEmpresa.php" method="post">
 
                         <div class="form-group">
                             <?php if($result) { ?>
-                            <select class="form-control" name="id_empresa">
-                                <?php foreach($result as $data): ?>
-                                <option value="<?php echo $data['id_empresa'] ?>">
-                                    <?php echo $data['nombre'] ?> </option>
-                                <?php endforeach ?>
+                                <select class="form-control" name="id_empresa">
+                            <?php foreach($result as $data): ?>
+                                <option value="<?php echo $data['id_empresa'] ?>"> <?php echo $data['nombre'] ?> </option>
+                            <?php endforeach ?>
                             </select>
                             <?php } else {
                                 echo '<p>NO HAY DATOS EN LA BASE</p>';
@@ -53,8 +52,8 @@
 
                         <?php if($result) { ?>
 
-                        <button type="submit" class="btn btn-danger">
-                            Eliminar
+                        <button type="submit" class="btn btn-success">
+                            Editar
                         </button>
 
                         <?php } ?>
