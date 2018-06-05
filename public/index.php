@@ -29,29 +29,29 @@
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empleados</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
                 <a class="dropdown-item" href="./empleados/nuevo.php">Añadir</a>
-                <a class="dropdown-item" href="editarEmpleado.php">Editar</a>
-                <a class="dropdown-item" href="empleado.php">Eliminar</a>
-                <a class="dropdown-item" href="verEmpleado.php">Ver todos los Datos</a>
+                <a class="dropdown-item" href="./empleados/editar.php">Editar</a>
+                <a class="dropdown-item" href="./empleados/eliminar.php">Eliminar</a>
+                <a class="dropdown-item" href="./empleados/empleados.php">Ver todos los Datos</a>
             </div>
         </div>
         <!-- /btn-group -->
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salarios</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                <a class="dropdown-item" href="nuevoSalario.php">Añadir</a>
-                <a class="dropdown-item" href="editarSalario.php">Editar</a>
-                <a class="dropdown-item" href="salario.php">Eliminar</a>
-                <a class="dropdown-item" href="verSalario.php">Ver todos los datos</a>
+                <a class="dropdown-item" href="./salarios/nuevo.php">Añadir</a>
+                <a class="dropdown-item" href="./salarios/editar.php">Editar</a>
+                <a class="dropdown-item" href="./salarios/eliminar.php">Eliminar</a>
+                <a class="dropdown-item" href="./salarios/salarios.php">Ver todos los datos</a>
             </div>
         </div>
         <!-- /btn-group -->
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Puestos</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                <a class="dropdown-item" href="nuevoPuesto.php">Añadir</a>
-                <a class="dropdown-item" href="editarPuesto.php">Editar</a>
-                <a class="dropdown-item" href="puesto.php">Eliminar</a>
-                <a class="dropdown-item" href="verPuesto.php">Ver todos los Datos</a>
+                <a class="dropdown-item" href="./puestos/nuevo.php">Añadir</a>
+                <a class="dropdown-item" href="./puestos/editar.php">Editar</a>
+                <a class="dropdown-item" href="./puestos/eliminar.php">Eliminar</a>
+                <a class="dropdown-item" href="./puestos/puestos.php">Ver todos los Datos</a>
             </div>
         </div>
         <!-- /btn-group -->

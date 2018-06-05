@@ -5,22 +5,24 @@
 
 <?php 
 
-include '../../src/config/pdo.php';
+    include '../../src/config/pdo.php';
 
-$query = 'SELECT id_salario, monto FROM salarios';
+    $query = 'SELECT U.id_dep, U.nombre_departamento, E.nombre
+    FROM departamentos U
+    INNER JOIN empresas E ON U.id_empresa = E.id_empresa';
 
-try {
-    $db = new db();
-    $db = $db->connect();
-    $ejecutar = $db->query($query);
-    $result = $ejecutar->fetchAll();
-    $db = null;
+    try {
+        $db = new db();
+        $db = $db->connect();
+        $ejecutar = $db->query($query);
+        $result = $ejecutar->fetchAll();
+        $db = null;
 
-} catch(PDOException $e) {
-    echo $e->getMessage();
-}
+    } catch(PDOException $e) {
+        echo $e->getMessage();
+    }
 
-?> 
+?>
 
 
 
@@ -31,24 +33,24 @@ try {
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Salario
+                        Departamentos
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="../../src/methods/deleteSalario.php" method="POST">
+                    <form action="../../src/methods/deleteDepartamento.php" method="POST">
 
-                       <div class="form-group">
+                        <div class="form-group">
                             <?php if($result) { ?>
-                                <select class="form-control" name="id_salario">
-                            <?php foreach($result as $data): ?>
-                                <option value="<?php echo $data['id_salario'] ?>"> <?php echo $data['monto'] ?> </option>
-                            <?php endforeach ?>
+                            <select class="form-control" name="id_dep">
+                                <?php foreach($result as $data): ?>
+                                <option value="<?php echo $data['id_dep'] ?>">
+                                    <?php echo $data['nombre_departamento'] . ' de ' . $data['nombre'] ?> </option>
+                                <?php endforeach ?>
                             </select>
                             <?php } else {
                                 echo '<p>NO HAY DATOS EN LA BASE</p>';
                             }?>
                         </div>
-
 
 
                         <?php if($result) { ?>
