@@ -1,6 +1,6 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <div class="container mt-3">
