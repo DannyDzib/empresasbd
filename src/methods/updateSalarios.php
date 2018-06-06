@@ -3,9 +3,10 @@
         include '../config/pdo.php';
 
         $monto = $_POST['monto'];
+        $id = $_POST['id_salario'];
 
         $sql = "UPDATE salarios SET
-				monto = :monto,
+				monto = :monto
 			WHERE id_salario = $id";
 
 

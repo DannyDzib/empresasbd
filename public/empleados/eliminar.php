@@ -7,9 +7,7 @@
 
     include '../../src/config/pdo.php';
 
-    $query = 'SELECT U.id_dep, U.nombre_departamento, E.nombre
-    FROM departamentos U
-    INNER JOIN empresas E ON U.id_empresa = E.id_empresa';
+    $query = 'SELECT rfc, nombre FROM empleados';
 
     try {
         $db = new db();
@@ -33,18 +31,18 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Departamentos
+                        Empleados
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="../../src/methods/deleteDepartamento.php" method="POST">
+                    <form action="../../src/methods/deleteEmpleados.php" method="POST">
 
                         <div class="form-group">
                             <?php if($result) { ?>
-                            <select class="form-control" name="id_dep">
+                            <select class="form-control" name="rfc">
                                 <?php foreach($result as $data): ?>
-                                <option value="<?php echo $data['id_dep'] ?>">
-                                    <?php echo $data['nombre_departamento'] . ' de ' . $data['nombre'] ?> </option>
+                                <option value="<?php echo $data['rfc'] ?>">
+                                    <?php echo $data['nombre'] ?> </option>
                                 <?php endforeach ?>
                             </select>
                             <?php } else {

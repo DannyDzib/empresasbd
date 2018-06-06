@@ -3,6 +3,7 @@
         include '../config/pdo.php';
 
         $monto = $_POST['monto'];
+     
         
         $sql = "INSERT INTO `salarios` 
         (`id_salario`,`monto`) 
@@ -13,7 +14,8 @@
             $db = new db();
             $db = $db->connect();
             $stmt = $db->prepare($sql);
-            $stmt->bindParam(':monto', $monto);                    
+            $stmt->bindParam(':monto', $monto); 
+                            
             $stmt->execute();
             header('Location: ../../public/salarios/nuevo.php');
 

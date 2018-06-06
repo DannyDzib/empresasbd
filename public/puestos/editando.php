@@ -40,7 +40,8 @@ try {
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre</label>
                             <input type="text" value="<?php echo $result['nombre']?>" class="form-control" name="nombre">
-                            
+                            <input type="hidden" value="<?php echo $result['id_puesto']?>" name="id_puesto">
+
                         </div>
                        
 

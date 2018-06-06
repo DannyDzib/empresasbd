@@ -9,13 +9,15 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Nuevo empleado
+                        Puesto Nuevo
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" method="POST" action="../src/methods/nuevaEmpresa.php">
+                    <form autocomplete="off" method="POST" action="../../src/methods/nuevoEmpleado.php">
+                        
+                    
                         <div class="form-group">
-                            <label for="exampleInputEmail1">rfc</label>
+                         <label for="exampleInputEmail1">rfc</label>
                             <input type="text" class="form-control" name="rfc">
                         </div>
                         <div class="form-group">
@@ -34,6 +36,11 @@
                             <label for="exampleInputEmail1">Id Puesto</label>
                             <input type="text" class="form-control" name="id_puesto">
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Id Salario</label>
+                            <input type="text" class="form-control" name="id_salario">
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Id Empresa</label>
                             <input type="text" class="form-control" name="id_empresa">
@@ -42,6 +49,7 @@
                             <label for="exampleInputEmail1">Id Departamento</label>
                             <input type="text" class="form-control" name="id_departamento">
                         </div>
+                       
 
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>

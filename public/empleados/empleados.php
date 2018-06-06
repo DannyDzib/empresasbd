@@ -7,9 +7,7 @@
 
     include '../../src/config/pdo.php';
 
-    $query = "SELECT U.id_dep, U.nombre_departamento, E.nombre
-    FROM departamentos U
-    INNER JOIN empresas E ON U.id_empresa = E.id_empresa";
+    $query = 'SELECT * FROM empleados';
 
     try {
         $db = new db();
@@ -33,12 +31,11 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Departamentos
+                        Empresas
                     </h4>
                 </div>
                 <div class="card-body">
-
-                     <table class="table">
+                    <table class="table">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">rfc</th>
@@ -48,22 +45,21 @@
                                 <th scope="col">Puesto</th>
                                 <th scope="col">Salario</th>
                                 <th scope="col">Empresa</th>
-                                <th scope="col">Departamentos</th>
+                                <th scope="col">Departamento</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if($result): ?>
                             <?php foreach($result as $data): ?>
                             <tr>
-                                <th scope="row"> <?php echo $data['rfc'] ?> </th>
-                                <td> <?php echo $data['nombre'] ?> </td>
-                                <td> <?php echo $data['apellido'] ?> </td>
-                                <td> <?php echo $data['edad'] ?> </td>
-                                <td> <?php echo $data['id_puesto'] ?> </td>
-                                <td> <?php echo $data['id_salario'] ?> </td>
-                                <td> <?php echo $data['id_empresa'] ?> </td>
-                                <td> <?php echo $data['id_departamento'] ?> </td>
-
+                                <th scope="row"><?php echo $data['rfc'] ?></th>
+                                <td><?php echo $data['nombre'] ?></td>
+                                <td><?php echo $data['apellido'] ?></td>
+                                <td><?php echo $data['edad'] ?></td>
+                                <td><?php echo $data['id_puesto'] ?></td>
+                                <td><?php echo $data['id_salario'] ?></td>
+                                <td><?php echo $data['id_empresa'] ?></td>
+                                <td><?php echo $data['id_departamento'] ?></td>
                             </tr>
                             <?php endforeach ?>
                             <?php endif ?>
@@ -73,7 +69,7 @@
                                 <th colspan="5" scope="row">TABLA VACÍA</th>
                             </tr>
                             <?php endif ?>
-                        </tbody>    
+                        </tbody>
                     </table>
                 </div>
             </div>

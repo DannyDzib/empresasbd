@@ -1,7 +1,7 @@
 <?php 
 
-$id = $_POST['id_salario'];
+$id = $_POST['rfc'];
 
-header("Location: ../../public/puestos/editando.php?id_salario=$id");
+header("Location: ../../public/puestos/editando.php?rfc=$id");
 
 ?>

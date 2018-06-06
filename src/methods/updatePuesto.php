@@ -7,8 +7,7 @@
        
 
         $sql = "UPDATE puestos SET
-				nombre 	= :nombre,
-				
+				nombre 	= :nombre				
 			WHERE id_puesto = $id";
 
 
@@ -20,7 +19,7 @@
           
             $stmt->execute(); 
 
-            header('Location: ../../public/empresas/editar.php');
+            header('Location: ../../public/puestos/editar.php');
 
         } catch(PDOException $e) {
             echo $e->getMessage();
