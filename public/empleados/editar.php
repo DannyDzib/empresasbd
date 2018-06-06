@@ -8,7 +8,7 @@
 
     include '../../src/config/pdo.php';
 
-    $id = $_REQUEST['id_rfc'];
+    $id = $_REQUEST['rfc'];
     $query = "SELECT rfc, nombre FROM empleados WHERE rfc=$id";
 
     try {
