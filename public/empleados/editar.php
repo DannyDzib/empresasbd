@@ -11,11 +11,42 @@
     $id = $_REQUEST['rfc'];
     $query = "SELECT rfc, nombre FROM empleados WHERE rfc=$id";
 
+
+    
+
+
+    
+
     try {
         $db = new db();
         $db = $db->connect();
         $ejecutar = $db->query($query);
         $result = $ejecutar->fetchAll();
+
+
+        $salario = "SELECT E.id_puesto FROM salarios E
+        INNER JOIN empleados P ON E.id_puesto = P.id_puesto order by" . $result['id_puesto'];
+        
+        $empresa = "SELECT E.id_salario FROM empresas E
+        INNER JOIN empleados P ON E.id_empresa = P.id_empresa order by" . $result['id_empresa'];
+
+        $puesto = "SELECT E.id_puesto FROM puestos E
+        INNER JOIN empleados P ON E.id_puesto = P.id_puesto" . $result['id_puesto'];
+        
+        $departamento = "SELECT E.id_puesto FROM departamentos E
+        INNER JOIN empleados P ON E.id_departamento = P.id_dep order by" . $result['id_departamento'];
+
+        $ePuesto = $db->query($puesto);
+        $eSalario = $db->query($salario);
+        $eEmpresa = $db->query($empresa);
+        $eDepartamento = $db->query($departamento);
+        
+        $rPuesto = $ePuesto->fetchAll();
+        $rSalario = $ePuesto->fetchAll();
+        $rEmpresa = $ePuesto->fetchAll();
+        $rDepartartamento = $ePuesto->fetchAll();
+
+        
         $db = null;
 
     } catch(PDOException $e) {

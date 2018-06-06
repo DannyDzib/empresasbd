@@ -5,7 +5,7 @@
         private $dbhost = 'localhost';
         private $dbname = 'proyectoDB';
         private $dbuser = 'root';
-        private $dbpass = 'AngelDanielDzibChan';
+        private $dbpass = '_19Mofeta84';
         // Connect
         public function connect(){
             $mysql_connect_str = "mysql:host=$this->dbhost;dbname=$this->dbname; charset=utf8";
