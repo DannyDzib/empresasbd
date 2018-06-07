@@ -28,7 +28,7 @@
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empleados</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                <a class="dropdown-item" href="nuevoEmpleado">Añadir</a>
+                <a class="dropdown-item" href="nuevoEmpleado.php">Añadir</a>
                 <a class="dropdown-item" href="editarEmpleado.php">Editar</a>
                 <a class="dropdown-item" href="empleado.php">Eliminar</a>
                 <a class="dropdown-item" href="verEmpleado.php">Ver todos los Datos</a>
@@ -38,7 +38,7 @@
         <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salarios</button>
             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                <a class="dropdown-item" href="nuevoSalario">Añadir</a>
+                <a class="dropdown-item" href="nuevoSalario.php">Añadir</a>
                 <a class="dropdown-item" href="editarSalario.php">Editar</a>
                 <a class="dropdown-item" href="salario.php">Eliminar</a>
                 <a class="dropdown-item" href="verSalario.php">Ver todos los datos</a>

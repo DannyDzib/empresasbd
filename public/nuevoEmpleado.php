@@ -15,20 +15,32 @@
                 <div class="card-body">
                     <form autocomplete="off" method="POST" action="../src/methods/nuevaEmpresa.php">
                         <div class="form-group">
+                            <label for="exampleInputEmail1">rfc</label>
+                            <input type="text" class="form-control" name="rfc">
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputEmail1">Nombre</label>
                             <input type="text" class="form-control" name="nombre">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Dirección</label>
-                            <input type="text" class="form-control" name="direccion">
+                            <label for="exampleInputEmail1">Apellido</label>
+                            <input type="text" class="form-control" name="apellido">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Telefono</label>
-                            <input type="text" class="form-control" name="telefono">
+                            <label for="exampleInputEmail1">Edad</label>
+                            <input type="text" class="form-control" name="edad">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Correo</label>
-                            <input type="text" class="form-control" name="correo">
+                            <label for="exampleInputEmail1">Id Puesto</label>
+                            <input type="text" class="form-control" name="id_puesto">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Id Empresa</label>
+                            <input type="text" class="form-control" name="id_empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Id Departamento</label>
+                            <input type="text" class="form-control" name="id_departamento">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Guardar</button>

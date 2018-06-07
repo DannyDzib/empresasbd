@@ -9,16 +9,24 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Puesto nuevo
+                        Salario nuevo
                     </h4>
                 </div>
                 <div class="card-body">
                     <form autocomplete="off" method="POST" action="../src/methods/nuevaEmpresa.php">
+                    </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Nombre de puesto</label>
-                            <input type="text" class="form-control" name="nombre">
+                            <label for="exampleInputEmail1">monto</label>
+                            <input type="text" class="form-control" name="monto">
                         </div>
-                       
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Fecha</label>
+                            <input type="text" class="form-control" name="fecha">
+                        
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">rfc</label>
+                            <input type="text" class="form-control" name="rfc">
+                        </div>
 
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
