@@ -1,10 +1,10 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 <?php 
 
-include '../src/config/pdo.php';
+include '../../src/config/pdo.php';
 
 $query = 'SELECT id_empresa, nombre FROM empresas';
 
@@ -32,7 +32,7 @@ try {
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" method="POST" action="../src/methods/nuevoDepartamento.php">
+                    <form autocomplete="off" method="POST" action="../../src/methods/nuevoDepartamento.php">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre del departamento</label>
                             <input type="text" class="form-control" name="nombre">

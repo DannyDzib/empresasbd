@@ -1,13 +1,13 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <?php 
 
-    include '../src/config/pdo.php';
+    include '../../src/config/pdo.php';
 
-    $query = 'SELECT id_empresa, nombre FROM empresas';
+    $query = 'SELECT id_dep, nombre_departamento FROM departamentos';
 
     try {
         $db = new db();
@@ -20,7 +20,7 @@
         echo $e->getMessage();
     }
 
-?> 
+?>
 
 
 
@@ -31,24 +31,26 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Empresas
+                        Departamentos
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="../src/methods/editarEmpresa.php" method="post">
+                    <form action="../../src/methods/editarDepartamento.php" method="post">
 
                         <div class="form-group">
                             <?php if($result) { ?>
-                                <select class="form-control" name="id_empresa">
-                            <?php foreach($result as $data): ?>
-                                <option value="<?php echo $data['id_empresa'] ?>"> <?php echo $data['nombre'] ?> </option>
-                            <?php endforeach ?>
+                            <select class="form-control" name="id_dep">
+                                <?php foreach($result as $data): ?>
+                                <option value="<?php echo $data['id_dep'] ?>">
+                                    <?php echo $data['nombre_departamento'] ?> </option>
+                                <?php endforeach ?>
                             </select>
+                            <input type="hidden" value="<?php echo $data['id_empresa'] ?>" name="id_empresa">
+
                             <?php } else {
                                 echo '<p>NO HAY DATOS EN LA BASE</p>';
                             }?>
                         </div>
-
 
                         <?php if($result) { ?>
 

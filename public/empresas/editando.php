@@ -1,11 +1,11 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <?php 
 
-include '../src/config/pdo.php';
+include '../../src/config/pdo.php';
 
 $id = $_REQUEST['id_empresa'];
 
@@ -36,7 +36,7 @@ try {
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" method="POST" action="../src/methods/updateEmpresa.php">
+                    <form autocomplete="off" method="POST" action="../../src/methods/updateEmpresa.php">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nombre</label>
                             <input type="text" value="<?php echo $result['nombre']?>" class="form-control" name="nombre">

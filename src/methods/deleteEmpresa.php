@@ -13,7 +13,7 @@
             $ejecutar = $db->query($query);
             $result = $ejecutar->execute();
 
-            header('Location: ../../public/empresas.php');
+            header('Location: ../../public/empresas/empresas.php');
 
         } catch(PDOException $e) {
             echo $e->getMessage();

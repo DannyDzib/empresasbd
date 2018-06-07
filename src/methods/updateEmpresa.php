@@ -26,7 +26,7 @@
             $stmt->bindParam(':correo', $correo);
             $stmt->execute(); 
 
-            header('Location: ../../public/editarEmpresa.php');
+            header('Location: ../../public/empresas/editar.php');
 
         } catch(PDOException $e) {
             echo $e->getMessage();

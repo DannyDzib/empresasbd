@@ -1,13 +1,15 @@
-<?php include '../src/partials/head.php' ?>
+<?php include '../../src/partials/head.php' ?>
 
-<?php include '../src/components/navbar.php' ?>
+<?php include '../../src/components/navbar.php' ?>
 
 
 <?php 
 
-    include '../src/config/pdo.php';
+    include '../../src/config/pdo.php';
 
-    $query = 'SELECT * FROM empresas';
+    $query = "SELECT U.id_dep, U.nombre_departamento, E.nombre
+    FROM departamentos U
+    INNER JOIN empresas E ON U.id_empresa = E.id_empresa";
 
     try {
         $db = new db();
@@ -31,29 +33,26 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="display-5">
-                        Empresas
+                        Departamentos
                     </h4>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+
+                     <table class="table">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Dirección</th>
-                                <th scope="col">Télefono</th>
-                                <th scope="col">Correo</th>
+                                <th scope="col">Empresa</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if($result): ?>
                             <?php foreach($result as $data): ?>
                             <tr>
-                                <th scope="row"><?php echo $data['id_empresa'] ?></th>
-                                <td><?php echo $data['nombre'] ?></td>
-                                <td><?php echo $data['direccion'] ?></td>
-                                <td><?php echo $data['telefono'] ?></td>
-                                <td><?php echo $data['correo'] ?></td>
+                                <th scope="row"> <?php echo $data['id_dep'] ?> </th>
+                                <td> <?php echo $data['nombre_departamento'] ?> </td>
+                                <td> <?php echo $data['nombre'] ?> </td>
                             </tr>
                             <?php endforeach ?>
                             <?php endif ?>

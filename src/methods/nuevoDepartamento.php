@@ -19,7 +19,7 @@
             $stmt->bindParam(':id_empresa', $id_empresa);
             $stmt->execute(); 
 
-            header('Location: ../../public/nuevoDepartamento.php');
+            header('Location: ../../public/departamentos/nuevo.php');
 
         } catch(PDOException $e) {
             echo $e->getMessage();

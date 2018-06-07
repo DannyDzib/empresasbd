@@ -22,7 +22,7 @@
             $stmt->bindParam(':correo', $correo);
             $stmt->execute(); 
 
-            header('Location: ../../public/nuevaEmpresa.php');
+            header('Location: ../../public/empresas/nueva.php');
 
         } catch(PDOException $e) {
             echo $e->getMessage();
